@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    background-color: $brand--dark-blue;
+    padding: 43px 0;
+    width: 100%;
+    height: 100vh;
+
+    .image--bg {
+        width: 100%;
+        height: 66vh;
+        background-image: url("../img/dog.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        
+        h1.tagline {
+            @include remCalc('font-size', 56px);
+            @include align(both);
+            text-align: center;
+            color: #fff;
+            span {
+                @include remCalc('font-size', 24px);
+                display: block;
+                font-family: $sans-serif;
+            }
+        }
+    }
+}
+
+section.section {
+    @include clearfix();
+    width: 100%;
+}
+
+
+.footer {
+    @include clearfix();
+    background-color: $brand--dark-blue;
+}

@@ -1,5 +1,17 @@
-html, body {
-    height: 100%;
-    min-height: 100%;
-    background-color: greenyellow;
-}
+// Colours
+
+$brand--dark-blue: #373a3f;
+$brand--bronze: #ba8666;
+
+
+
+// Fonts
+$sans-serif: 'Source Sans Pro', sans-serif;
+$serif: 'Lora', serif;
+
+
+// Breakpoints
+$breakpoint-tiny:	400px;
+$breakpoint-small:	650px;
+$breakpoint-medium:	960px;
+$breakpoint-large:	1140px;

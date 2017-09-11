@@ -1,4 +1,17 @@
 ---
 ---
 
+// Settings
+@import "reset";
 @import "variables";
+@import "functions";
+@import "mixins";
+
+// Jeet - http://jeet.gs/
+@import 'jeet/index';
+
+// Styles
+@import "base";
+@import "nav";
+@import "sections";
+

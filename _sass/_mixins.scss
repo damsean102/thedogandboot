@@ -1,0 +1,98 @@
+// ------------
+// MIXINS.
+// REM CALC
+// ------------
+// [!]DEPENDENCIES:
+// _functions.scss - calculateRem
+// ------------
+
+@mixin remCalc($propname, $size) {
+  #{$propname}: $size;
+  #{$propname}: calculateRem($size);
+}
+
+
+// ------------
+// MIXINS.
+// BUTTONS
+// ------------
+
+
+@mixin button() {
+  display: inline-block;
+  padding: .85em 1.75em;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #000;
+  background-color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color .25s, color .25s, border-color .25s;
+  &:hover {
+    background-color: darken(#333, 10%);
+    color: #fff; 
+    cursor: pointer;
+  }
+//   &:active {
+//     @if($button-has-scale-on-active){
+//       transform: scale(.95);
+//     }
+//     outline: none;
+//   }
+}
+
+
+// ------------
+// MIXINS.
+// MEDIA QUERIES
+// ------------
+// [!]DEPENDENCIES:
+// settings.breakpoints.scss
+// ------------
+
+@mixin respond-to($media) {
+    @if $media == tiny {
+        @media only screen 
+        and (max-width: $breakpoint-tiny)
+        { @content; }
+    }
+    @if $media == small-screen {
+        @media only screen  
+        and (max-width: $breakpoint-small - 1)
+        { @content; }
+    }
+    @if $media == medium-screen {
+        @media only screen 
+        and (max-width: $breakpoint-medium - 1)
+        { @content; }
+    }
+    @if $media == large-screen {
+        @media only screen 
+        and (min-width: $breakpoint-large)
+        { @content; }
+    }
+    @if $media == $media {
+        @media only screen 
+        and (max-width: $media)
+        { @content; }
+    }
+    @if $media == retina {
+        @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) 
+        { @content; }
+    }
+}
