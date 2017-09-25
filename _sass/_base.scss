@@ -33,3 +33,7 @@ img {
 .wrapper {
     @include center(88%);
 }
+
+.wrapper--medium {
+    @include center(76%);
+}
