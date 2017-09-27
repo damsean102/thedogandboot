@@ -120,6 +120,55 @@
     .heading {
         text-align: left;
     }
+
+    .testimonials--content {
+        @include center(67%);
+    }
+
+    .wrapper--carousel {
+        position: relative;
+        //@include center(72%);
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .testimonials--slider {
+        text-align: left;
+        margin: 70px 0;
+        
+        .slider--item {
+            
+
+            .col--image {
+                @include column(1/4);
+            }
+            .col--content {
+                @include column(3/4);
+                @include remCalc('font-size', 25px);
+
+                .testimonial--author {
+                    @include remCalc('font-size', 18px);
+                }
+            }
+        }
+    }
+
+    .testimonials--slider-controls {
+        color: $brand--bronze;
+
+        i {
+            @include remCalc('font-size', 24px);
+            position: absolute;
+            top: 40%;
+
+            &.fa-arrow-circle-left {
+                left: 0;
+            }
+            &.fa-arrow-circle-right {
+                right: 0;
+            }
+        }
+    }
 }
 
 .section--instagram {
