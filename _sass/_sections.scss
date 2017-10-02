@@ -190,6 +190,15 @@
 .section--contact {
     background: url('../img/contact-bg.jpg') no-repeat center center;
     background-size: cover;
+
+    .col {
+        @include column(1/2);
+    }
+
+    .contact--bg {
+        background-color: rgba(54, 57, 62, 0.8);
+        padding: 5.5%;
+    }
 }
 
 .footer {

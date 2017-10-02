@@ -20,9 +20,35 @@ var slider = tns({
     slideBy: 'page',
     autoplay: true,
     autoplayTimeout: 7000,
+    autoplayHoverPause: true,
     autoplayButtonOutput: false,
     controlsContainer: "#testimonials--slider-controls",
     nav: false,
     mouseDrag: true,
     arrowKeys: true
-  });
+});
+
+
+// for (var i = 0; i < document.getElementsByClassName("ignore-click").length; i++) {
+//     document.getElementsByClassName("ignore-click")[i].addEventListener('click', function (event) {
+//         var elmnt = document.getElementById("contact");
+//         elmnt.scrollIntoView();
+//     });
+// }
+
+var allTags = document.getElementById('nav').getElementsByTagName("a");
+for (var i = 0, len = allTags.length; i < len; i++) {
+    // allTags[i] is an element within the container object
+    // allTags[i].id is the id of the element (if there is one)
+
+    allTags[i].addEventListener('click', function (event) {
+        event.preventDefault();
+        // var section = this.getAttribute('href');
+        // console.log("HREF: " + section);
+        // section.scrollIntoView();
+        var elmnt = document.getElementById("contact");
+        elmnt.scrollIntoView({behavior: "smooth"});
+    });
+
+}
+
