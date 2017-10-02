@@ -12,3 +12,17 @@ var feed = new Instafeed({
     // }
 });
 feed.run();
+
+// Testimonials Slider
+var slider = tns({
+    container: '#testimonials--slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplayButtonOutput: false,
+    controlsContainer: "#testimonials--slider-controls",
+    nav: false,
+    mouseDrag: true,
+    arrowKeys: true
+  });
