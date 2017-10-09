@@ -191,6 +191,14 @@
     background: url('../img/contact-bg.jpg') no-repeat center center;
     background-size: cover;
 
+    h1,h2,h3,h4,h5,h6, p {
+        color: #fff;
+    }
+
+    p {
+        @include remCalc('font-size', 18px);
+    }
+    
     .col {
         @include column(1/2);
     }
@@ -198,6 +206,7 @@
     .contact--bg {
         background-color: rgba(54, 57, 62, 0.8);
         padding: 5.5%;
+        float: left;
     }
 }
 
