@@ -72,11 +72,11 @@
 }
 
 .section--full-image {
-    // background: #333;
-    background-repeat: no-repeat center center;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: 0 0;
     background-size: cover;
     background-attachment: fixed;
+    // padding: 240px 0;
 }
 
 .section--services {
@@ -191,8 +191,12 @@
     background: url('../img/contact-bg.jpg') no-repeat center center;
     background-size: cover;
 
-    h1,h2,h3,h4,h5,h6, p {
+    h1,h2,h3,h4,h5,h6,p {
         color: #fff;
+    }
+
+    .heading hr {
+        background: #fff;
     }
 
     p {
@@ -207,6 +211,43 @@
         background-color: rgba(54, 57, 62, 0.8);
         padding: 5.5%;
         float: left;
+    }
+
+    ul.contact--details {
+        margin: 35px 0 0 0;
+        li {
+            @include remCalc('font-size', 20px);
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        i {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            @include remCalc('font-size', 20px);
+            color: #fff;
+            padding: 10px;
+            margin-right: 24px;
+        }
+    }
+}
+
+
+ul.social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+        display: inline;
+        margin-right: 10px;
+    }
+    a {
+        @include remCalc('font-size', 42px);
+        color: #fff;
     }
 }
 

@@ -23,8 +23,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thedogandboot.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Contact Details
-contact_email: me@thedogandboot.com
-contact_phone: 07896805442
+contact_email: thedogandboot@gmail.com
+contact_phone: 07896 805 442
 
 # Social Media Links
 social_facebook: https://www.facebook.com/thedogandboot/

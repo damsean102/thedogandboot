@@ -31,9 +31,8 @@ textarea
     line-height:1;
 	
 	/* Browsers have different default form fonts */
-    // font-size: 13px;
     @include remCalc('font-size', 16px);
-	// font-family: Arial;
+	font-family: $sans-serif;
 }
 
 /* Remove the stupid outer glow in Webkit */
@@ -131,12 +130,19 @@ button,
 input[type="reset"],
 input[type="button"],
 input[type="submit"]{
+    transition: background-color 0.4s ease;
     background-color: $brand--bronze;
     text-align: center;
     padding: 15px;
+    color: #fff;
 	/* Fix IE7 display bug */
 	overflow:visible;
-	width: 100%;
+    width: 100%;
+    
+    &:hover {
+        background-color: darken($brand--bronze, 8%);
+        cursor: pointer;
+    }
 }
 
 /* IE8 and FF freak out if this rule is within another selector */
@@ -160,7 +166,7 @@ textarea {
 	vertical-align:top;
 	
 	/* Turn off scroll bars in IE unless needed */
-	overflow:auto;
+    overflow:auto;
 }
 
 /* Selects

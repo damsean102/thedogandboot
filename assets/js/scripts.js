@@ -52,3 +52,20 @@ for (var i = 0, len = allTags.length; i < len; i++) {
 
 }
 
+// (function(){
+    
+//     var parallax = document.querySelectorAll(".parallax"),
+//         speed = 0.1;
+
+//     window.onscroll = function(){
+//         [].slice.call(parallax).forEach(function(el,i){
+
+//             var windowYOffset = window.pageYOffset,
+//                 elBackgrounPos = "50% " + -(windowYOffset * speed) + "px";
+
+//             el.style.backgroundPosition = elBackgrounPos;
+
+//         });
+//     };
+
+// })();
