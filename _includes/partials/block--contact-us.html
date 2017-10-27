@@ -1,7 +1,19 @@
 <section id="contact" class="section section--contact">
     <div class="wrapper--medium">
         <div class="contact--bg">
-            <div class="col">
+            <div class="col col--text">
+                    <div class="heading">
+                        <p>Contact</p>
+                        <hr>
+                    </div>
+                    <h2>Get in touch &amp; let me know how I can help</h2>
+                    <p>My Kettle is always on so pop along with with your furry four legged family member I’d love to meet you both.</p>
+    
+                    {% include partials/partial--social.html %}
+                    {% include partials/partial--contact-details.html %}
+    
+                </div>
+            <div class="col col--form">
                 <form action="https://formspree.io/thedogandboot@gmail.com" method="POST">
                     <input type="text" name="name" placeholder="Your name...">
                     <input type="email" name="_replyto" placeholder="Your email...">
@@ -10,23 +22,6 @@
                     <input type="submit" value="Send">
                 </form>
             </div>
-            <div class="col">
-                <div class="heading">
-                    <p>Contact</p>
-                    <hr>
-                </div>
-                <h2>Get in touch &amp; let me know how I can help</h2>
-                <p>My Kettle is always on so pop along with with your furry four legged family member I’d love to meet you both.</p>
-
-                {% include partials/partial--social.html %}
-
-                <ul class="contact--details">
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="{{site.contact_email}}">{{site.contact_email}}</a></li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> {{site.contact_phone}}</li>
-                </ul>
-
-            </div>
-            
         </div>
     </div>
     

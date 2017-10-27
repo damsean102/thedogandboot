@@ -1,13 +1,20 @@
     <footer class="footer">
         <div class="wrapper">
-            {% include partials/nav.html %}
-            {% include partials/partial--social.html %}
+            <div class="col">
+                {% include partials/nav.html %}
+                {% include partials/partial--contact-details.html %}
+                <p><small>&copy; <span id="date--year"></span> The Dog &amp; Boot. All rights reserved</small></p>
+            </div>
+
+            <div class="col-logo">
+                <img src="assets/img/dog-and-boot-logo.png" class="logo">
+            </div>
         </div>
     </footer>
 
-    <script type="text/javascript" src="/assets/js/instafeed.min.js"></script>
+    <script type="text/javascript" src="assets/js/instafeed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.1.8/min/tiny-slider.js"></script>
-    <script type="text/javascript" src="/assets/js/scripts.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
 
 </body>
 </html>

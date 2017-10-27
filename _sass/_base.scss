@@ -26,6 +26,10 @@ p {
     margin-bottom: 1.6em;
 }
 
+small {
+    @include remCalc('font-size', 12px);
+}
+
 img {
     max-width: 100%;
 }

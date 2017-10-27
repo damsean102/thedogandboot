@@ -28,25 +28,20 @@ var slider = tns({
     arrowKeys: true
 });
 
-
-// for (var i = 0; i < document.getElementsByClassName("ignore-click").length; i++) {
-//     document.getElementsByClassName("ignore-click")[i].addEventListener('click', function (event) {
-//         var elmnt = document.getElementById("contact");
-//         elmnt.scrollIntoView();
-//     });
-// }
-
-var allTags = document.getElementById('nav').getElementsByTagName("a");
+var allTags = document.getElementsByClassName('nav--item');
 for (var i = 0, len = allTags.length; i < len; i++) {
     // allTags[i] is an element within the container object
     // allTags[i].id is the id of the element (if there is one)
 
     allTags[i].addEventListener('click', function (event) {
         event.preventDefault();
-        // var section = this.getAttribute('href');
-        // console.log("HREF: " + section);
-        // section.scrollIntoView();
-        var elmnt = document.getElementById("contact");
+
+        // Get href of element
+        var section = this.getAttribute('href');
+        section = section.replace("#", "");
+
+        // Get HTML object of element
+        var elmnt = document.getElementById(section);
         elmnt.scrollIntoView({behavior: "smooth"});
     });
 
@@ -69,3 +64,11 @@ for (var i = 0, len = allTags.length; i < len; i++) {
 //     };
 
 // })();
+
+function getDate(){
+    var today = new Date();
+    var year = today.getFullYear();
+    document.getElementById("date--year").innerHTML = year;
+}
+  
+getDate();
