@@ -66,6 +66,7 @@
     @include respond-to($breakpoint-small) {
         height: auto;
         padding: 40px 0;
+        text-align: center;
     }
 
     h2 {
@@ -85,7 +86,13 @@
             border: none;
             background: #333;
             margin: 0 0 1.6em 0;
+
+            @include respond-to($breakpoint-small) {
+                @include center(100px);
+            }
         }
+
+        
     }
 }
 
@@ -95,6 +102,14 @@
 
         @include respond-to($breakpoint-small) {
             @include stack();
+        }
+    }
+
+    img {
+        margin-bottom: 40px;
+
+        @include respond-to($breakpoint-small) {
+            margin-bottom: 0;
         }
     }
 }
@@ -111,6 +126,7 @@
         height: 50vh;
         background-size: contain;
         background-attachment: initial;
+        padding: 0;
     }
 }
 
@@ -130,6 +146,8 @@
 
         @include respond-to($breakpoint-small) {
             @include stack();
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         img {
@@ -158,10 +176,18 @@
 
     .heading {
         text-align: left;
+
+        @include respond-to($breakpoint-small) {
+            text-align: center;
+        }
     }
 
     .testimonials--content {
         @include center(67%);
+
+        @include respond-to($breakpoint-small) {
+            @include center(76%);
+        }
     }
 
     .wrapper--carousel {
@@ -310,6 +336,9 @@
 
     ul.contact--details {
         margin: 35px 0 0 0;
+        @include respond-to($breakpoint-small) {
+            text-align: left;
+        }
         li {
             @include remCalc('font-size', 20px);
         }
@@ -364,10 +393,18 @@ ul.contact--details {
 
     .col {
         @include column(11/12);
+
+        @include respond-to($breakpoint-small) {
+            @include stack();
+        }
     }
 
     .col-logo {
         @include column(1/12);
+
+        @include respond-to($breakpoint-small) {
+            @include stack();
+        }
     }
 
     a {
