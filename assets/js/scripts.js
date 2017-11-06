@@ -47,28 +47,28 @@ for (var i = 0, len = allTags.length; i < len; i++) {
 
 }
 
-// (function(){
-    
-//     var parallax = document.querySelectorAll(".parallax"),
-//         speed = 0.1;
-
-//     window.onscroll = function(){
-//         [].slice.call(parallax).forEach(function(el,i){
-
-//             var windowYOffset = window.pageYOffset,
-//                 elBackgrounPos = "50% " + -(windowYOffset * speed) + "px";
-
-//             el.style.backgroundPosition = elBackgrounPos;
-
-//         });
-//     };
-
-// })();
-
 function getDate(){
     var today = new Date();
     var year = today.getFullYear();
     document.getElementById("date--year").innerHTML = year;
 }
-  
 getDate();
+
+
+function equalHeights(selector) {
+    var elms = document.querySelectorAll(selector);
+    var len = elms.length;
+    var tallest = 0;
+    var elm, elmHeight, x;
+
+    for (x=0; x < len; x++) {
+        elm = elms[x];
+        elmHeight = elm.offsetHeight;
+        tallest = (elmHeight > tallest) ? elmHeight : tallest;
+    }
+
+    for (x=0; x < len; x++) {
+        elms[x].style.height = tallest + 'px';
+    }
+}
+equalHeights('.services--copy');

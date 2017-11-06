@@ -163,6 +163,7 @@
 
         img {
             margin: 0 0 41px;
+            max-width: 70%;
         }
 
         h3 {
@@ -269,7 +270,7 @@
         font-size: 53px;
         color: #fff;
         position: absolute;
-        top: 120px;
+        top: 33px;
         left: 33px;
 
         &:hover {
@@ -277,7 +278,7 @@
         }
 
         @include respond-to($breakpoint-small) {
-            top: 73px;
+            top: 33px;
         }
     }
 
