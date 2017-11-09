@@ -28,6 +28,8 @@ var slider = tns({
     arrowKeys: true
 });
 
+
+// SCROLL TO ELEMENT
 var allTags = document.getElementsByClassName('nav--item');
 for (var i = 0, len = allTags.length; i < len; i++) {
     // allTags[i] is an element within the container object
@@ -72,3 +74,27 @@ function equalHeights(selector) {
     }
 }
 equalHeights('.services--copy');
+
+
+
+// document.getElementById("toggle-nav").addEventListener("click", toggleActiveClass);
+// var menu = document.getElementById('nav');
+// document.getElementById("toggle-nav").addEventListener("click", function () {
+//     toggleActiveClass(menu);
+// }, false);
+
+// function toggleActiveClass(el) {
+//     this.classList.toggle('active');
+//     el.classList.toggle('active');
+// }
+
+
+var menuBtn = document.getElementById('toggle-nav');
+var menu = document.getElementById('nav');
+
+function toggleNav(event, cname) {
+    this.classList.toggle(cname);
+}
+
+menuBtn.addEventListener('click', toggleNav.bind(menuBtn, event, 'active'), false);
+menuBtn.addEventListener('click', toggleNav.bind(menu, event, 'active'), false);
