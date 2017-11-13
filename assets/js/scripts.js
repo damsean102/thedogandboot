@@ -1,17 +1,17 @@
-var feed = new Instafeed({
-    get: 'user',
-    userId: '197710895',
-    accessToken: '197710895.1677ed0.0508ad9cddf84edbbb5b38349ab9d1f0',
-    target: 'instagram--feed',
-    sortBy: 'most-recent',
-    resolution: 'standard_resolution',
-    limit: '6',
-    template: '<div class="instagram--item"><a href="{{link}}" target="_blank" rel="noopener noreferrer"><img src="{{image}}" /></a></div>',
-    // filter: function(image) {
-    //     return image.tags.indexOf('TAG_NAME') >= 0;
-    // }
-});
-feed.run();
+// var feed = new Instafeed({
+//     get: 'user',
+//     userId: '197710895',
+//     accessToken: '197710895.1677ed0.0508ad9cddf84edbbb5b38349ab9d1f0',
+//     target: 'instagram--feed',
+//     sortBy: 'most-recent',
+//     resolution: 'standard_resolution',
+//     limit: '6',
+//     template: '<div class="instagram--item"><a href="{{link}}" target="_blank" rel="noopener noreferrer"><img src="{{image}}" /></a></div>',
+//     // filter: function(image) {
+//     //     return image.tags.indexOf('TAG_NAME') >= 0;
+//     // }
+// });
+// feed.run();
 
 // Testimonials Slider
 var slider = tns({
@@ -22,7 +22,7 @@ var slider = tns({
     autoplayTimeout: 7000,
     autoplayHoverPause: true,
     autoplayButtonOutput: false,
-    controlsContainer: "#testimonials--slider-controls",
+    // controlsContainer: "#testimonials--slider-controls",
     nav: false,
     mouseDrag: true,
     arrowKeys: true
@@ -76,19 +76,7 @@ function equalHeights(selector) {
 equalHeights('.services--copy');
 
 
-
-// document.getElementById("toggle-nav").addEventListener("click", toggleActiveClass);
-// var menu = document.getElementById('nav');
-// document.getElementById("toggle-nav").addEventListener("click", function () {
-//     toggleActiveClass(menu);
-// }, false);
-
-// function toggleActiveClass(el) {
-//     this.classList.toggle('active');
-//     el.classList.toggle('active');
-// }
-
-
+// Responsive Menu
 var menuBtn = document.getElementById('toggle-nav');
 var menu = document.getElementById('nav');
 
