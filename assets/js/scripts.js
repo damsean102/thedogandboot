@@ -44,7 +44,7 @@ for (var i = 0, len = allTags.length; i < len; i++) {
 
         // Get HTML object of element
         var elmnt = document.getElementById(section);
-        elmnt.scrollIntoView({behavior: "smooth"});
+        elmnt.scrollIntoView({ behavior: "smooth", block: "start"});
     });
 
 }
@@ -73,8 +73,17 @@ function equalHeights(selector) {
         elms[x].style.height = tallest + 'px';
     }
 }
-equalHeights('.services--copy');
 
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+if (x > 640) {
+    equalHeights('.services--copy');
+}   
 
 // Responsive Menu
 var menuBtn = document.getElementById('toggle-nav');
