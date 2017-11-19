@@ -140,6 +140,7 @@
         h1.tagline {
             @include remCalc('font-size', 66px);
             @include align(both);
+            top: 40%;
             text-align: center;
             color: #fff;
             letter-spacing: 5px;
